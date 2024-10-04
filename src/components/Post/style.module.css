@@ -1,0 +1,34 @@
+.container {
+    padding: 20px;
+    background-color: #fff6;
+    border-radius: 8px;
+    width: 100%;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    animation: animate-in 1s ease-out forwards;
+    overflow-x: hidden;
+    white-space: wrap;
+    text-overflow: ellipsis;
+
+    .title {
+        border-bottom: #5554;
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    .description {
+        overflow-x: hidden;
+        white-space: wrap;
+        text-overflow: ellipsis;
+    }
+}
+
+@keyframes animate-in {
+    from {
+      opacity: 0;
+      transform: translateY(1rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }

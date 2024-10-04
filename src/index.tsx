@@ -2,6 +2,8 @@ import React from 'react';
 import {createRoot} from 'react-dom/client';
 import App from './App';
 import './global.css';
+import { PostContextProvider } from './contexts/PostContext';
+import { ModalContextProvider } from './contexts/ModalContext';
 
 const rootElement = document.querySelector('#root');
 
@@ -13,7 +15,11 @@ else {
 
     root.render(
         <React.StrictMode>
-            <App />
+            <PostContextProvider>
+                <ModalContextProvider>
+                    <App />
+                </ModalContextProvider>
+            </PostContextProvider>
         </React.StrictMode>
     )
 }

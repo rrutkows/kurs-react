@@ -1,0 +1,53 @@
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 60px !important;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+}
+
+.reactIcon {
+    width: 200px;
+    height: 200px;
+    mask-size: contain;
+    mask-image: url('@public/icons/react.svg');
+    
+    position: relative;
+    overflow: hidden;
+    animation: rotate 5s linear infinite;
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(40deg, #b0d35a, #3fab99 62.16%);
+        animation: rotate 5s linear infinite reverse;
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.title {
+    color: white;
+    font-weight: 700;
+    font-size: 28px;
+}
